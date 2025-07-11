@@ -20,12 +20,12 @@ app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
 
 const PORT = process.env.PORT || 5001;
-//  __dirname = path.resolve();
-const currentDir = path.resolve();
+ __dirname = path.resolve();
+// const currentDir = path.resolve();
 
 if (process.env.NODE_ENV === "production") {
-  // app.use(express.static(path.join(__dirname, "../frontend/dist")));
-  app.use(express.static(path.join(currentDir, "../frontend/dist")));
+  app.use(express.static(path.join(__dirname, "../frontend/dist")));
+  // app.use(express.static(path.join(currentDir, "../frontend/dist")));
 
   app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "../frontend", "dist", "index.html"));

@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import Navbar from "./components/Navbar";
-// import Navbar from "./components/navbar";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
